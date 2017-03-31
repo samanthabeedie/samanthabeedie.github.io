@@ -12,3 +12,15 @@
 
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
+
+    <!-- Instafeed JavaScript -->
+    <script src="{{ "/js/instafeed.min.js" | prepend: site.baseurl }}"></script>
+    
+    <script type="text/javascript">
+        var userFeed = new Instafeed({
+            get: 'user',
+            userId: '3045889',
+            accessToken: '3045889.1677ed0.c70a9c5177814762b20ca2fdd596c23d'
+        });
+        userFeed.run();
+     </script>
