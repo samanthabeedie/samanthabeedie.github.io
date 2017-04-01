@@ -31,11 +31,13 @@ h2 {
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
 }
+
 h2.scripty {
   margin: 0 0 35px;
   text-transform: none;
   font-family: 'Italianno', cursive;
   font-weight: 700;
+  white-space: nowrap;
 }
 
 h3,
@@ -272,9 +274,9 @@ a:focus {
 
 .gallery-section {
     width: 100%;
-    padding: 50px 0;
+    padding: 10px 0;
     color: {{ site.color.text }};
-    background: url(/img/downloads-bg.jpg) no-repeat center center scroll;
+    // background: url(/img/downloads-bg.jpg) no-repeat center center scroll;
     background-color: {{ site.color.primary-bg }};
     -webkit-background-size: cover;
     -moz-background-size: cover;
