@@ -7,24 +7,5 @@
     <!-- Plugin JavaScript -->
     <script src="{{ "/js/jquery.easing.min.js" | prepend: site.baseurl }}"></script>
 
-    <!-- Google Maps API Key - Use your own API key to enable the map feature. More information on the Google Maps API can be found at https://developers.google.com/maps/ -->
-    <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCRngKslUGJTlibkQ3FkfTxj3Xss1UlZDA&sensor=false"></script>
-
     <!-- Custom Theme JavaScript -->
     <script src="{{ "/js/grayscale.js" | prepend: site.baseurl }}"></script>
-
-    <!-- Instafeed JavaScript -->
-    <script src="{{ "/js/instafeed.min.js" | prepend: site.baseurl }}"></script>
-
-    <script type="text/javascript">
-        var tattooFeed = new Instafeed({
-            target: 'tattooTag',
-            get: 'tagged',
-            tagName: 'tattoos',
-            userId: '3045889',
-            clientId: '9c1f3d9329e240abaee51ffb45759134',
-            accessToken: '3045889.9c1f3d9.e60935e6c8964b0e977dd432750d6cd3',
-            template: '<a href="{{link}}" target="_blank"><img src="{{image}}" /></a>'
-        });
-        tattooFeed.run();
-     </script>
