@@ -3,19 +3,20 @@
         <div class="row">
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
-                <p><a href="mailto:{{ site.email }}?subject=Website enquiry&body=Hi Samantha,">Tap here to email me now.</a></p>
                 <p>As I run a private studio all consultations and bookings are by appointment only.</p>
-                <p>In the first instance please email me with as much information about the ideas you have. Feel free to ask any questions and I'll get back to you as soon as I can.</p>
-                <p><a href="mailto:{{ site.email }}?subject=Website email enquiry&body=Hi Samantha,">{{ site.email }}</a></p>
-                <!--
-                <ul class="list-inline banner-social-buttons">
-                    {% for network in site.social %}
-                    <li>
-                        <a href="{{ network.url }}"  target="_blank" class="btn btn-default btn-lg"><i class="fa fa-{{ network.title }} fa-fw"></i> <span class="network-name">{{ network.title }}</span></a>
-                    </li>
-                    {% endfor %}
-                </ul>
-              -->
+                <p>Use the form below for any enquiries you have:</p>
+                <form method="POST" class="form-horizontal" action="http://formspree.io/samanthabeedie12@gmail.com">
+                    <div class="form-group">
+                        <input type="email" name="email" class="form-control" placeholder="Your email" required /><br/>
+                        <textarea name="message" class="form-control" placeholder="Your message" required></textarea><br/>
+                        <input type="hidden" name="_subject" value="Website contact form" />
+                        <input type="text" name="_gotcha" style="display:none" />
+                        <input type="hidden" name="_next" value="//www.samanthabeedie.com/thanks" />
+                        <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="network-name">Send</span></button>
+                    </div>
+                </form>
+                <p>Alternatively:</p>
+                <p><a href="mailto:{{ site.email }}?subject=Website enquiry&body=Hi Samantha," class="btn btn-default btn-lg"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
             </div>
         </div>
     </section>
