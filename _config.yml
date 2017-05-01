@@ -1,6 +1,7 @@
 # Site settings
 title: Samantha Beedie
 email: info@samanthabeedie.com
+formspree_token: xdaoazbm # Either form token or email address 
 url: https://www.samanthabeedie.com
 description: "Tattoo artist and illustrator in the heart of Manchester city centre."
 

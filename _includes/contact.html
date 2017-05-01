@@ -5,7 +5,7 @@
                 <h2>Contact</h2>
                 <p>As I run a private studio all consultations and bookings are by appointment only.</p>
                 <p>Use the form below for any questions you have:</p>
-                <form method="POST" class="form-horizontal" action="http://formspree.io/{{ site.email }}">
+                <form method="POST" class="form-horizontal" action="http://formspree.io/{{ site.formspree_token }}">
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Your email" required /><br/>
                         <textarea name="message" class="form-control" placeholder="Your message" required></textarea><br/>
