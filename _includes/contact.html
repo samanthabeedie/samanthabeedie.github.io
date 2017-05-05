@@ -5,14 +5,8 @@
                 <h2>Contact</h2>
                 <p>As I run a private studio all consultations and bookings are by appointment only.</p>
                 <p>Use the form below for any questions you have:</p>
-                <script>
-                  function DoSubmit(){
-                    document.contact-form._subject.value = 'Website contact for from: ' + document.contact-form.email.value;
-                    return true;
-                  }
-                </script>
-                <form name="contact-form" method="POST" class="form-horizontal"
-                    action="http://formspree.io/{{ site.formspree_token }}"
+                <form name="contact" method="POST" class="form-horizontal"
+                    action="https://formspree.io/{{ site.formspree_token }}"
                     onsubmit="DoSubmit();">
                     <div class="form-group">
                         <input type="email" name="email" class="form-control" placeholder="Your email" required /><br/>
@@ -23,6 +17,12 @@
                         <button type="submit" class="btn btn-default btn-lg"><i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="network-name">Send</span></button>
                     </div>
                 </form>
+                <script>
+                  function DoSubmit(){
+                    document.contact._subject.value = 'Website contact for from: ' + document.contact.email.value;
+                    return true;
+                  }
+                </script>
                 <p>Alternatively:</p>
                 <p><a href="mailto:{{ site.email }}?subject=Website enquiry&body=Hi Samantha," class="btn btn-default btn-lg"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
             </div>
