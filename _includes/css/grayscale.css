@@ -12,6 +12,11 @@ body {
     background-color: {{ site.color.primary-bg }};
 }
 
+.help-block {
+  background-color: #ddd;
+  font-weight: bold;
+}
+
 html {
     width: 100%;
     height: 100%;

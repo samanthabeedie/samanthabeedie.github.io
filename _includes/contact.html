@@ -7,10 +7,18 @@
                 <p>Use the form below for any questions you have:</p>
                 <form name="contact" method="POST" class="form-horizontal"
                     action="https://formspree.io/{{ site.formspree_token }}"
-                    onsubmit="DoSubmit();">
+                    onsubmit="DoSubmit();" data-toggle="validator">
                     <div class="form-group">
-                        <input type="email" name="email" class="form-control" placeholder="Your email" required /><br/>
-                        <textarea name="message" class="form-control" placeholder="Your message" required></textarea><br/>
+                        <input type="email" name="email" id="inputEmail" class="form-control" data-error="Invalid email address" placeholder="Your email" required />
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" name="email2" class="form-control" data-match="#inputEmail" data-error="Invalid email address" data-match-error="Email address doesn't match" placeholder="Retype your email" required />
+                        <div class="help-block with-errors"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" class="form-control" placeholder="Your message" required></textarea>
+                        <div class="help-block with-errors"></div>
                         <input type="hidden" name="_subject" value="Website contact form" />
                         <input type="text" name="_gotcha" style="display:none" />
                         <input type="hidden" name="_next" value="//www.samanthabeedie.com/thanks" />
