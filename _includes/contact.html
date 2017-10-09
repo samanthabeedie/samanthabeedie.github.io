@@ -4,7 +4,8 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
                 <p>As I run a private studio all consultations and bookings are by appointment only.</p>
-                <p>Use the form below for any questions you have:</p>
+                <p><a href="mailto:{{ site.email }}?subject=Website enquiry&body=Hi Samantha," class="btn btn-default btn-lg"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
+                <p>Alternatively, use the form below for any questions you have:</p>
                 <form name="contact" method="POST" class="form-horizontal"
                     action="https://formspree.io/{{ site.formspree_token }}"
                     onsubmit="DoSubmit();" data-toggle="validator">
@@ -31,8 +32,6 @@
                     return true;
                   }
                 </script>
-                <p>Alternatively:</p>
-                <p><a href="mailto:{{ site.email }}?subject=Website enquiry&body=Hi Samantha," class="btn btn-default btn-lg"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
             </div>
         </div>
     </section>
