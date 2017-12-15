@@ -4,8 +4,20 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
                 <p>As I run a private studio all consultations and bookings are by appointment only.</p>
-                <p><a href="mailto:{{ site.email }}?subject=Website enquiry&body=Hi Samantha," class="btn btn-default btn-lg"
-                  onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Email Button');"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
+                <script type="text/javascript">
+                  function emailLink() {
+                    var email = "{{ site.email }}";
+                    var greeting = "Hello Samantha,"
+                    var rnd = Math.random().toString(34).replace(/[^a-z0-9]+/g, '').substr(1, 9);
+                    var subj = "Website enquiry [" + rnd + "]";
+
+                    mailtoString = "mailto:" + email + "?subject=" + subj + "&body=" + greeting;
+
+                    document.getElementById("emailButton").href = mailtoString;
+                  };
+                </script>
+                <p><a href="mailto:{{ site.email }}" id="emailButton" class="btn btn-default btn-lg"
+                  onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Email Button'); emailLink();"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
                 <p>Alternatively, use the form below for any questions you have:</p>
                 <form name="contact" method="POST" class="form-horizontal"
                     action="https://formspree.io/{{ site.formspree_token }}"
