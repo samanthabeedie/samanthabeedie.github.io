@@ -1,15 +1,16 @@
 # Site settings
 title: Samantha Beedie
 email: info@samanthabeedie.com
-formspree_token: xdaoazbm # Either form token or email address 
+formspree_token: xdaoazbm # Either form token or email address
 url: https://www.samanthabeedie.com
 description: "Tattoo artist and illustrator in the heart of Manchester city centre."
 
 # Color settings (hex-codes without the leading hash-tag)
 color:
-  primary-bg: '#000000'
+  primary-bg: '#F9F9F7'
+  panel-bg: '#F9F9F7'
   links: '#E69500'
-  text: '#ffffff'
+  text: '#333333'
 
 # Footer settings
 footer: Samantha Beedie
