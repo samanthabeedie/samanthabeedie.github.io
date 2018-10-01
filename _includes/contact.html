@@ -42,6 +42,12 @@
                 </form>
                 <script>
                   function DoSubmit(){
+                    var sendr = document.contact.email.value;
+                    var blokre = new RegExp("^.*@.*\.(?:ru)$");
+                    if (blokre.test(sendr)) {
+                      window.location.replace("https://www.samanthabeedie.com/thanks");
+                      return false;
+                    }
                     document.contact._subject.value = 'Web contact from: ' + document.contact.email.value;
                     return true;
                   }
