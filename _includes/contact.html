@@ -46,7 +46,6 @@
                     if (blokre.test(document.contact.email.value)) {
                       ga('send', 'event', 'Interaction Points', 'Contact', 'Blocked');
                       document.contact._gotcha.value = 'Gotcha: ' + document.contact.email.value;
-                      window.location.replace("https://www.samanthabeedie.com/thanks");
                       return false;
                     }
                     document.contact._subject.value = 'Web contact from: ' + document.contact.email.value;
