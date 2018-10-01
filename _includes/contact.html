@@ -42,10 +42,10 @@
                 </form>
                 <script>
                   function DoSubmit(){
-                    var sendr = document.contact.email.value;
                     var blokre = new RegExp("^.*@.*\.(?:ru)$");
-                    if (blokre.test(sendr)) {
+                    if (blokre.test(document.contact.email.value)) {
                       ga('send', 'event', 'Interaction Points', 'Contact', 'Blocked');
+                      document.contact._gotcha.value = 'Gotcha: ' + document.contact.email.value;
                       window.location.replace("https://www.samanthabeedie.com/thanks");
                       return false;
                     }
