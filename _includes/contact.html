@@ -20,7 +20,7 @@
                   onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Email Button'); emailLink();"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
                 <p>Alternatively, use the form below for any questions you have:</p>
                 <form name="contact" method="POST" class="form-horizontal"
-                    action="https://formspree.io/{{ site.formspree_token }}"
+                    action="https://formspree.io/404/404"
                     onsubmit="DoSubmit();" data-toggle="validator">
                     <div class="form-group">
                         <input type="email" name="_replyto" id="inputEmail" class="form-control" data-error="Invalid email address" placeholder="Your email" required />
@@ -37,7 +37,8 @@
                         <input type="text" name="_gotcha" style="display:none" />
                         <input type="hidden" name="_next" value="//www.samanthabeedie.com/thanks" />
                         <button type="submit" class="btn btn-default btn-lg"
-                          onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Contact Button');"><i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="network-name">Send</span></button>
+                          onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Contact Button'); this.form.action='https://formspree.io/{{ site.formspree_token }}';">
+                            <i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="network-name">Send</span></button>
                     </div>
                 </form>
                 <script>
