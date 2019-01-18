@@ -44,12 +44,12 @@
                 <script>
                   function DoSubmit(){
                     var blokre = new RegExp("^.*@.*\.(?:ru)$");
-                    if (blokre.test(document.contact.email.value)) {
+                    if (blokre.test(document.contact._replyto.value)) {
                       ga('send', 'event', 'Interaction Points', 'Contact', 'Blocked');
-                      document.contact._gotcha.value = 'Gotcha: ' + document.contact.email.value;
+                      document.contact._gotcha.value = 'Gotcha: ' + document.contact._replyto.value;
                       return false;
                     }
-                    document.contact._subject.value = 'Web contact from: ' + document.contact.email.value;
+                    document.contact._subject.value = 'Web contact from: ' + document.contact._replyto.value;
                     ga('send', 'event', 'Interaction Points', 'Contact', 'Allowed');
                     return true;
                   }
