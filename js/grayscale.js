@@ -51,7 +51,7 @@ function init() {
     zoom: 16,
 
     // The latitude and longitude to center the map (always required)
-    center: new google.maps.LatLng(53.4722, -2.2412), // New York
+    center: new google.maps.LatLng(53.3902941, -2.3457698), // New York
 
     // Disables the default Google Maps UI components
     disableDefaultUI: true,
@@ -67,7 +67,7 @@ function init() {
   map = new google.maps.Map(mapElement, mapOptions);
 
   // Custom Map Marker Icon - Customize the map-marker.png file to customize your icon
-  var myLatLng = new google.maps.LatLng(53.4722, -2.2412);
+  var myLatLng = new google.maps.LatLng(53.3902941, -2.3457698);
   var beachMarker = new google.maps.Marker({
     position: myLatLng,
     map: map
