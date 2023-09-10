@@ -413,5 +413,6 @@ form {
 }
 
 img.shop {
+    display: block;
     width: 100%;
 }
