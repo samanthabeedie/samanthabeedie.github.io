@@ -411,3 +411,7 @@ body {
 form {
   padding: 0 10px;
 }
+
+img.shop {
+    width: 100%;
+}
