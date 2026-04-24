@@ -4,56 +4,14 @@
             <div class="col-lg-8 col-lg-offset-2">
                 <h2>Contact</h2>
                 <p>All consultations and bookings are by appointment only.</p>
-                <script type="text/javascript">
-                  function emailLink() {
-                    var email = "{{ site.email }}";
-                    var greeting = "Hello Samantha,%0A%0A"
-                    var rnd = Math.random().toString(34).replace(/[^a-z0-9]+/g, '').substr(1, 9);
-                    var subj = "Website enquiry [" + rnd + "]";
-
-                    mailtoString = "mailto:" + email + "?subject=" + subj + "&body=" + greeting;
-
-                    document.getElementById("emailButton").href = mailtoString;
-                  };
-                </script>
-                <p><a href="mailto:{{ site.email }}" id="emailButton" class="btn btn-default btn-lg"
-                  onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Email Button'); emailLink();"><i class="fa fa-envelope"></i> <span class="network-name">Email me</span></a></p>
-                <p>Alternatively, use the form below for any questions you have:</p>
-                <form name="contact" method="POST" class="form-horizontal"
-                    action="https://formspree.io/404/404"
-                    onsubmit="DoSubmit();" data-toggle="validator">
-                    <div class="form-group">
-                        <input type="email" name="_replyto" id="inputEmail" class="form-control" data-error="Invalid email address" placeholder="Your email" required />
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <input type="email" name="emailConfirm" class="form-control" data-match="#inputEmail" data-error="Invalid email address" data-match-error="Email address doesn't match" placeholder="Retype your email" required />
-                        <div class="help-block with-errors"></div>
-                    </div>
-                    <div class="form-group">
-                        <textarea rows="6" name="message" class="form-control" placeholder="Your message" required></textarea>
-                        <div class="help-block with-errors"></div>
-                        <input type="hidden" name="_subject" value="Website contact form" />
-                        <input type="text" name="_gotcha" style="display:none" />
-                        <input type="hidden" name="_next" value="//www.samanthabeedie.com/thanks" />
-                        <button type="submit" class="btn btn-default btn-lg"
-                          onClick="ga('send', 'event', 'Interaction Points', 'Click', 'Contact Button'); this.form.action='https://formspree.io/{{ site.formspree_token }}';">
-                            <i class="fa fa-paper-plane" aria-hidden="true"></i> <span class="network-name">Send</span></button>
-                    </div>
-                </form>
-                <script>
-                  function DoSubmit(){
-                    var blokre = new RegExp("^.*@.*\.(?:ru)$");
-                    if (blokre.test(document.contact._replyto.value)) {
-                      ga('send', 'event', 'Interaction Points', 'Contact', 'Blocked');
-                      document.contact._gotcha.value = 'Gotcha: ' + document.contact._replyto.value;
-                      return false;
-                    }
-                    document.contact._subject.value = 'Web contact from: ' + document.contact._replyto.value;
-                    ga('send', 'event', 'Interaction Points', 'Contact', 'Allowed');
-                    return true;
-                  }
-                </script>
+                <p>Make enquiries and bookings:</p>
+                     <ul class="list-inline banner-social-buttons">
+                       <li>
+                           <a href="https://link.getink.app/artists/samanthabeedie.tattoos"
+                             target="_blank" class="btn btn-default btn-lg"
+                             onClick="ga('send', 'event', 'Interaction Points', 'Click', 'GetInk Button');" ><i class="fa fa-calendar"></i> <span class="network-name">getink</span></a>
+                       </li>
+                   </ul>
             </div>
         </div>
         <!-- Map Section -->
